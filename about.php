@@ -1,3 +1,10 @@
+<?php
+    $name = 'Никита';
+    $age = '30';
+    $email = '91nickel@gmail.com';
+    $city = 'Электросталь';
+    $about = 'что-то о себе';
+?>
 <html lang='en'>
 <head>
     <meta charset='UTF-8'>
@@ -10,13 +17,6 @@
             margin-left: 3rem;
         }
     </style>
-    <?php
-    $name = 'Никита';
-    $age = '30';
-    $email = '91nickel@gmail.com';
-    $city = 'Электросталь';
-    $about = 'что-то о себе';
-    ?>
 </head>
 <body>
 <h1>Страница пользователя Никита</h1>
