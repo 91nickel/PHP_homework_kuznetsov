@@ -17,13 +17,13 @@ if (isset($_GET['y'])) {
 
 }
 
-for ($var1 = 1, $var2 = 1; $var1 < 100; $var3 = $var1, $var4 = $var4 . ' ' . $var3, $var1 = $var1 + $var2, $var2 = $var3) {
+for ($var1 = 1, $var4 = $var1, $var2 = 1; $var1 < 100; $var3 = $var1, $var4 = $var4 . ' ' . $var3, $var1 = $var1 + $var2, $var2 = $var3) {
     if ($var1 == $x) {
         $textBox1 = 'входит в числовой ряд';
         break;
     }
 }
-for ($var11 = 1, $var21 = 1; $var11 < 100; $var31 = $var11, $var41 = $var41 . ' ' . $var31, $var11 = $var11 + $var21, $var21 = $var31) {
+for ($var11 = 1, $var41 = $var11, $var21 = 1; $var11 < 100; $var31 = $var11, $var41 = $var41 . ' ' . $var31, $var11 = $var11 + $var21, $var21 = $var31) {
     if ($var11 == $y) {
         $textBox2 = 'входит в числовой ряд';
         break;
