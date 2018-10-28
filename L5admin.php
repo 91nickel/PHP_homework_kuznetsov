@@ -17,17 +17,22 @@
     Отправить этот файл: <input name="uploadedTest" type="file"/>
     <input type="submit" value="Отправить файл"/>
 </form>
+<br/>
+<a href="L5list.php">Перейти к списку тестов</a>
+<br>
+<br>
 </body>
 </html>
 <?php
 $file = $_FILES;
 if (!empty($file) && array_key_exists('uploadedTest', $file)) {
-    $counter = file_get_contents('L5list.php');
-    var_dump($counter);
-    $count = count(explode(' ', $counter)) + 1;
-    $filename = "$count".'.json '."\n";
-    var_dump($filename);
-    file_put_contents('L5list.php', "$filename",FILE_APPEND);
-    move_uploaded_file($file['uploadedTest']['tmp_name'], 'tests/'."$count".'.json');
+    $counter = scandir('tests', 1);
+    //var_dump($counter);
+    $count = count($counter) - 2 + 1;
+    //$filename = "$count".'.json '."\n";
+    //var_dump($filename);
+    //file_put_contents('L5list.php', "$filename",FILE_APPEND);
+    move_uploaded_file($file['uploadedTest']['tmp_name'], 'tests/' . "$count" . '.json');
+    echo "Тест успешно загружен в файл $count.json ";
 }
 ?>
